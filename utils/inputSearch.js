@@ -12,9 +12,6 @@ function inputSearch(value) {
         }, (error, response, body) => {
             const $ = cheerio.load(body);
             const homePageArr = [];
-            // $('.UpdateList').each((index, element) => {
-            //     console.log(index);
-            // })
             $('.UpdateList').children('.itemBox').each((index, element) => {
                 let obj = {};
                 obj.imgUrl = $(element).children('.itemImg').children().children().attr('src');
@@ -23,7 +20,6 @@ function inputSearch(value) {
                 obj.cartoonNewName =  $(element).children('.coll').html();
                 obj.cartoonNewUrl = $(element).children('.coll').attr('href');
                 homePageArr.push(obj);
-                console.log(obj);
             }) 
             if (error) {
                 reject(error)
