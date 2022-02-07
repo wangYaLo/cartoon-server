@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const getUpdataPage = require('../utils/getUpdataPageData');
+const htmlDownLoad = require('../../utils/cartoonUtils/getHomePageData');
 
-router.post('/getUpdataPageData', function(req, res, next) {
-    getUpdataPage().then((data) => {
+router.post('/getHomePageData', function(req, res, next) {
+    htmlDownLoad().then((data) => {
         res.send(data)
     }).catch((isError => {
         res.send(isError);

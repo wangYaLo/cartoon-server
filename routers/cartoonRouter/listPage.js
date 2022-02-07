@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const htmlDownLoad = require('../utils/getHomePageData');
+const getListPage = require('../../utils/cartoonUtils/getListPageData');
 
-router.post('/getHomePageData', function(req, res, next) {
-    htmlDownLoad().then((data) => {
+router.post('/getListPageData', function(req, res, next) {
+    getListPage(req.body.url).then((data) => {
         res.send(data)
     }).catch((isError => {
         res.send(isError);

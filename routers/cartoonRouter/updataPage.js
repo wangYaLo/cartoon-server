@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const getListPage = require('../utils/getListPageData');
+const getUpdataPage = require('../../utils/cartoonUtils/getUpdataPageData');
 
-router.post('/getListPageData', function(req, res, next) {
-    getListPage(req.body.url).then((data) => {
+router.post('/getUpdataPageData', function(req, res, next) {
+    getUpdataPage().then((data) => {
         res.send(data)
     }).catch((isError => {
         res.send(isError);

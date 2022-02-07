@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const getSearchList = require('../utils/getSearchPageList');
-const inputSearch = require('../utils/inputSearch');
+const getSearchList = require('../../utils/cartoonUtils/getSearchPageList');
+const inputSearch = require('../../utils/cartoonUtils/inputSearch');
 
 router.post('/getSearchList', function(req, res, next) {
     getSearchList().then((data) => {

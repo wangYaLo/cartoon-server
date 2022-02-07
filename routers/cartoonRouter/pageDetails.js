@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const cartoonDetails = require('../utils/getCartoonDetails')
-const pageDetails = require('../utils/getPageDetails')
+const cartoonDetails = require('../../utils/cartoonUtils/getCartoonDetails')
+const pageDetails = require('../../utils/cartoonUtils/getPageDetails')
 
 router.post('/getPageDetails', (req, res, next) => {
     console.log();

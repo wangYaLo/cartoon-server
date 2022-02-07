@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const getRankPage = require('../utils/getRankPageData');
+const getRankPage = require('../../utils/cartoonUtils/getRankPageData');
 
 router.post('/getRankPageData', function(req, res, next) {
     getRankPage().then((data) => {
